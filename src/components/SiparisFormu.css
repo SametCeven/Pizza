@@ -1,0 +1,78 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.content-wrapper{
+    margin:3rem 10rem 0rem 10rem;
+    max-width: 60rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+}
+
+/* Header bölümü için CSS */
+.header{
+    background-color:#CE2829;
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.3rem;
+}
+.header-logo{
+    width: 15rem;
+    margin-top: 1rem;
+}
+
+.nav{
+    display: flex;
+    gap: 1rem;
+    font-size:12px;
+}
+
+.nav a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Explanation bölümü için CSS */
+.exp{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+.exp h1{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.exp p{
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+/* Tüm formlardaki ortak bölümler için CSS */
+form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+.title{
+    display: flex;
+    font-weight: 600;
+}
+.title p{
+    color:#CE2829;
+    margin-left: 0.2rem;
+}
+.title h2{
+    font-weight: 400;
+}
+.title-check{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin-bottom: 2rem;
+}
+

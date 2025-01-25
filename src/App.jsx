@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import './App.css'
+import SiparisFormu from "./components/SiparisFormu.jsx"
 
 export default function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <p>hello</p>
+      
+      <SiparisFormu></SiparisFormu>
     </>
   )
 }

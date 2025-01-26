@@ -4,11 +4,11 @@
     justify-content: space-between;
 }
 .content-wrapper{
-    margin:3rem 10rem 0rem 10rem;
-    max-width: 60rem;
+    margin:1.5rem 5rem 0rem 5rem;
+    max-width: 80rem;
     display: flex;
     flex-direction: column;
-    row-gap: 5rem;
+    row-gap: 1.5rem;
 }
 
 /* CSS for Header component */
@@ -41,8 +41,8 @@
 .exp{
     display: flex;
     flex-direction: column;
-    row-gap: 2rem;
-    padding-bottom: 2rem;
+    row-gap: 1rem;
+    padding-bottom: 1rem;
     border-bottom: 1px solid gray;
 }
 .exp h1{
@@ -58,20 +58,28 @@
 form{
     display: flex;
     flex-direction: column;
-    row-gap: 5rem;
+    row-gap: 3rem;
 }
-.title{
+.form-sub1{
     display: flex;
+    flex-direction: row;
+    justify-content: left;
+    column-gap: 1rem;
+}
+
+.title{
     font-weight: 600;
     margin-bottom: 1rem;
 }
 .title p{
     color:#CE2829;
-    margin-left: 0.5rem;
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
 }
 .title h2{
     font-weight: 400;
-    margin-left: 0.5rem;
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
 }
 
 /*CSS for Radio component */
@@ -79,12 +87,17 @@ form{
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
+    width: 10rem;
 }
 .input-radio input{
     margin-right: 0.5rem;
 }
 
 /*CSS for Check component */
+.input-check{
+    display: inline-block;
+    width: 30%;
+}
 .input-check input{
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
@@ -94,6 +107,7 @@ form{
 .order-footer{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 /*CSS for OrderFooter component, order-counter */
@@ -101,32 +115,38 @@ form{
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 4.5rem;
     margin: 1rem 0;
     border: 1px solid #5F5F5F;
     border-radius: 5px;
 }
 .order-counter p{
-    width: 1rem;
+    width: 2.5rem;
     text-align: center;
     padding: 0 1rem;
 }
 .order-counter button{
     border:none;
     background-color: #FDC913;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 5px;
 }
 .order-counter button:hover{
-    background-color: #FAF7F2;
+    background-color: #292929;
+    color: white;
 }
 
 /*CSS for OrderFooter component, order-total */
+.order-note{
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid gray;
+}
 .order-total{
     display: flex;
     flex-direction: column;
     width: 25rem;
-    padding: 3rem 3rem;
-    row-gap: 1.5rem;
-    margin-bottom: 10rem;
+    padding: 2rem 2rem;
+    margin-bottom: 1rem;
     border: 1px solid #5F5F5F;
     border-radius: 5px;
 }
@@ -134,11 +154,13 @@ form{
     background-color: #FDC913;
     color: black;
     font-weight: 600;
+    height: 3rem;
+    
 }
 .order-detail{
     display: flex;
     flex-direction: column;
-    row-gap: 1.5rem;
+    row-gap: 0.5rem;
 }
 .order-detail h1{
     font-size: 1.5rem;
@@ -148,6 +170,7 @@ form{
     font-size: 1rem;
     color:#CE2829;
     font-weight: 600;
+    margin-bottom: 1rem;
 }
 .order-amount{
     display: flex;

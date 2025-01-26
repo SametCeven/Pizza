@@ -32,7 +32,7 @@ const initialError = {
 
 const errorMessages = {
     size: "Please select size!",
-    crust: "Please select crusty type!",
+    crust: "Please select crust type!",
     toppings: "Plase select at least 4 and at most 10 toppings!",
     name: "Name needs to be at least 3 characters!"
 }
@@ -138,19 +138,21 @@ export default function SiparisFormu(){
                 </div>
 
                 <form onSubmit={handleSubmit}>
-                    <div>
-                        <Radio 
-                            handleChange={handleChange}
-                            error = {error.size}
-                            errorMessages = {errorMessages.size}
-                            ></Radio>
-                    </div>
-                    <div>
-                        <Dropdown 
-                            handleChange={handleChange}
-                            error = {error.crust}
-                            errorMessages = {errorMessages.crust}
-                            ></Dropdown>
+                    <div className="form-sub1">
+                        <div>
+                            <Radio 
+                                handleChange={handleChange}
+                                error = {error.size}
+                                errorMessages = {errorMessages.size}
+                                ></Radio>
+                        </div>
+                        <div>
+                            <Dropdown 
+                                handleChange={handleChange}
+                                error = {error.crust}
+                                errorMessages = {errorMessages.crust}
+                                ></Dropdown>
+                        </div>
                     </div>
                     <div>
                         <Checkbox 

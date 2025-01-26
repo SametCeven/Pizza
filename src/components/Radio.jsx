@@ -1,21 +1,25 @@
-export default function Radio(){
+export default function Radio(props){
+    const {handleChange,error,errorMessages} = props;
+
+    
     return(
-        <form>
+        <>
             <div className="title">
-                <h1>Boyut Seç</h1>
+                <h1>Select Size</h1>
                 <p>*</p>
+                {error?<p>{errorMessages}</p>:""}
             </div>
             <div className="input">
-                <label>Küçük
-                    <input type="radio" value="Küçük" id="küçük" name="radio"/>
+                <label>Small
+                    <input type="radio" value="Small" id="small" name="size" onChange={handleChange}/>
                 </label>
-                <label>Orta
-                    <input type="radio" value="Orta" id="orta" name="radio"/>
+                <label>Medium
+                    <input type="radio" value="Medium" id="medium" name="size" onChange={handleChange}/>
                 </label>
-                <label>Büyük
-                    <input type="radio" value="Büyük" id="büyük" name="radio"/>
+                <label>Large
+                    <input type="radio" value="Large" id="large" name="size" onChange={handleChange}/>
                 </label>
             </div>
-    </form>
+    </>
     )
 }

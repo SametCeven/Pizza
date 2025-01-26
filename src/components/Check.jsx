@@ -1,12 +1,13 @@
 export default function Check(props){
-    const {malzeme} = props;
+    const {topping,handleChange} = props;
 
     return(
         <div>
-            <label> {malzeme}
+            <label> {topping}
                 <input type="checkbox" 
-                name="Check"
-                value={malzeme}
+                name="toppings"
+                value={topping}
+                onChange={handleChange}
                 />
             </label>
         </div>

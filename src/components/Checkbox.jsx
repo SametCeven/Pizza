@@ -1,25 +1,31 @@
 import Check from "./Check";
 import {useState} from "react";
 
-const malzemelerInitial = ["Pepperoni","Tavuk Izgara","Mısır","Sarımsak","Ananas","Sosis","Soğan","Sucuk","Biber","Kabak","Kanada Jambonu","Domates","Jalepeno","Sucuk"]
 
-export default function Checkbox(){
-    const [malzemeler,setMalzemeler] = useState(malzemelerInitial);
+
+export default function Checkbox(props){
+    const {handleChange,error,errorMessages,toppingsInitial} = props;
+    const [toppings,setToppings] = useState(toppingsInitial);
+
+    
 
     return(
-        <form>
+        <>
             <div className="title title-check">
-                <h1>Ek Malzemeler</h1>
-                <h2>En fazla 10 malzeme seçebilirsiniz. 5tl</h2>
+                <h1>Toppings</h1>
+                <h2>Maximum of 10 toppings can be selected. 5tl</h2>
+                {error?<p>{errorMessages}</p>:""}
             </div>
             <div>
-                {malzemeler.map((malzeme)=>{
-                    return(<Check
-                        malzeme = {malzeme}
+                {toppings.map((topping)=>{
+                    return(<Check 
+                        key={topping}
+                        topping = {topping}
+                        handleChange = {handleChange}
                     />)
                 })}
             </div>
-        </form>
+        </>
     )
 
 }

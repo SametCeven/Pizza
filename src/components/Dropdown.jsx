@@ -1,20 +1,21 @@
-export default function Dropdown(){
-
+export default function Dropdown(props){
+    const {handleChange,error,errorMessages} = props;
     return(
-        <form>
+        <>
             <div className="title">
-                <h1>Hamur Seç</h1>
+                <h1>Select Crust Type</h1>
                 <p>*</p>
+                {error?<p>{errorMessages}</p>:""}
             </div>
             <div>    
-                <select id="dropdown" name="dropdown">
-                    <option value="hamur">Hamur Kalınlığı</option>
-                    <option value="ince">İnce</option>
-                    <option value="orta">Orta</option>
-                    <option value="kalın">Kalın</option>
+                <select id="dropdown" name="crust" onChange={handleChange}>
+                    <option value="Crust">Select Crust Type</option>
+                    <option value="Thin">Thin</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Thick">Thick</option>
                 </select>
             </div>
-        </form>
+        </>
     )
 
 }

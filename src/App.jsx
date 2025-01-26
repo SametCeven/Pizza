@@ -1,13 +1,12 @@
-import { useState } from 'react'
 import './App.css'
-import SiparisFormu from "./components/SiparisFormu.jsx"
+import OrderForm from "./components/OrderForm.jsx"
 
 export default function App() {
 
   return (
     <>
       
-      <SiparisFormu></SiparisFormu>
+      <OrderForm></OrderForm>
     </>
   )
 }

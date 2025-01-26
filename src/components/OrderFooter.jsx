@@ -6,7 +6,7 @@ export default function SiparisFooter(props){
             <div className="order-note">
                 <h1 className="title">Order Note</h1>
                 <label>
-                    <textarea name="note" onChange={handleChange} placeholder="Is there any note you would like to share?" rows="5" cols="64"/>
+                    <textarea name="note" onChange={handleChange} placeholder="Is there any note you would like to share?" rows="5" cols="50"/>
                 </label>
             </div>
             <div className="order-counter">
@@ -19,15 +19,15 @@ export default function SiparisFooter(props){
                         <h1>Order Details</h1>
                         <div className="order-amount">
                             <h2>Toppings Amount</h2>
-                            <span>{toppingsAmount} tl</span>
+                            <span>{toppingsAmount} ₺</span>
                         </div>
                         <div className="order-amount">
                             <h2>Amount Per Pizza</h2>
-                            <span>{amount} tl</span>
+                            <span>{amount} ₺</span>
                         </div>
                         <div className="order-amount order-amount-total">
                             <h3>Total Amount</h3>
-                            <span>{totalAmount} tl</span>
+                            <span>{totalAmount} ₺</span>
                         </div>
                     </div>
                 {isValid?<button type="submit" disabled={!isValid}>ORDER</button>:""}

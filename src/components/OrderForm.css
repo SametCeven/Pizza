@@ -51,7 +51,7 @@
 }
 .exp p{
     font-size: 1rem;
-    line-height: 2rem;
+    line-height: 1.5rem;
 }
 
 /* CSS for shared items in all forms */
@@ -175,4 +175,11 @@ form{
 .order-amount{
     display: flex;
     justify-content: space-between;
+}
+
+/*Mobile adjustments*/
+@media(max-width:600px){
+    .input-check{
+        width: 50%;
+    }
 }

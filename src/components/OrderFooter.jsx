@@ -30,7 +30,8 @@ export default function SiparisFooter(props){
                         <span>{totalAmount} tl</span>
                     </div>
                 </div>
-                <button type="submit" disabled={!isValid}>ORDER</button>
+                {isValid?<button type="submit" disabled={!isValid}>ORDER</button>:""}
+                
             </div>
         </div>
     )

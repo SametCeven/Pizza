@@ -85,8 +85,6 @@ form{
 }
 
 /*CSS for Check component */
-.input-check{
-}
 .input-check input{
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
@@ -132,7 +130,7 @@ form{
     border: 1px solid #5F5F5F;
     border-radius: 5px;
 }
-.order-total button{
+.order-total button:enabled{
     background-color: #FDC913;
     color: black;
     font-weight: 600;

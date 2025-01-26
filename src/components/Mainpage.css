@@ -1,0 +1,42 @@
+.mainpage-container{
+    position: relative;
+    max-width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.mainpage-container img{
+    position: absolute;
+}
+.mainpage-container h1{
+    position: absolute;
+}
+.mainpage-container button{
+    position: absolute;
+}
+.mainpage-bgimg{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.mainpage-logo{
+    margin: auto 0;
+    margin-top: 5rem;
+}
+.mainpage-container h1{
+    font-size: 3rem;
+    margin-top: 12rem;
+    color: white;
+    font-weight: 300;
+    line-height: 1.5;
+}
+.mainpage-container button{
+    background-color:#FDC913;
+    margin-top: 24rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 3rem;
+    padding: 1rem 5rem;
+}

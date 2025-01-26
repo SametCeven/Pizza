@@ -1,4 +1,5 @@
 import {useState,useEffect} from "react";
+import { useHistory } from "react-router-dom";
 import axios from "axios";
 import "./OrderForm.css";
 import Header from "./Header.jsx"; 
@@ -7,6 +8,7 @@ import Dropdown from "./Dropdown.jsx";
 import Checkbox from "./Checkbox.jsx";
 import Name from "./Name.jsx";
 import OrderFooter from "./OrderFooter.jsx";
+
 
 const initialFormData = {
     size:"",
@@ -39,9 +41,10 @@ const toppingsInitial = ["Pepperoni","Chicken","Corn","Garlic","Pineapple","Saus
 
 export default function SiparisFormu(){
     const [formData,setFormData] = useState(initialFormData);
-    const [error,setError] = useState(initialError)
+    const [error,setError] = useState(initialError);
     const [isValid,setIsValid] = useState(false);
-    
+    let history = useHistory();
+
     function handleClick(event){
         const {value,name,textContent} = event.target;
         if(formData.pizzaCount>1){
@@ -91,6 +94,7 @@ export default function SiparisFormu(){
         axios.post("https://reqres.in/api/pizza",formData)
         .then((response)=>console.log(response.data))
         .catch((error)=>console.log(error))
+        history.push("/OrderConfirmation");
     }
 
     useEffect(()=>{
@@ -119,9 +123,8 @@ export default function SiparisFormu(){
         let tempNum = Number(formData.amount) * Number(formData.pizzaCount)
         let temp = (Math.round(tempNum * 100) / 100).toFixed(2)
         setFormData({...formData,["totalAmount"]:temp});
-    },[formData.amount])
+    },[formData.amount,formData.pizzaCount])
 
-    console.log(formData)
 
     return (
         <div className="wrapper">

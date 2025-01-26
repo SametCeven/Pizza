@@ -1,0 +1,17 @@
+.order-conf{
+    background-color: #CE2829;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+.order-conf h1{
+    color:white;
+    font-size: 3rem;
+    margin-top: 10rem;
+    line-height: 1.5;
+}
+
+.order-conf img{
+    margin-top: 5rem;
+}

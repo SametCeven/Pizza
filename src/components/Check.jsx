@@ -1,15 +1,15 @@
 export default function Check(props){
     const {topping,handleChange} = props;
-
     return(
-        <div>
-            <label> {topping}
-                <input type="checkbox" 
+        <div className="input-check">
+            <input 
+                type="checkbox" 
                 name="toppings"
+                id={topping}
                 value={topping}
                 onChange={handleChange}
                 />
-            </label>
+            <label htmlFor={topping}>{topping}</label>
         </div>
     )
 }

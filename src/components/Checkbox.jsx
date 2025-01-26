@@ -11,15 +11,15 @@ export default function Checkbox(props){
 
     return(
         <>
-            <div className="title title-check">
+            <div className="title">
                 <h1>Toppings</h1>
                 <h2>Maximum of 10 toppings can be selected. 5tl</h2>
-                {error?<p>{errorMessages}</p>:""}
+                {error?<p>* {errorMessages}</p>:""}
             </div>
             <div>
-                {toppings.map((topping)=>{
+                {toppings.map((topping,index)=>{
                     return(<Check 
-                        key={topping}
+                        key={index}
                         topping = {topping}
                         handleChange = {handleChange}
                     />)

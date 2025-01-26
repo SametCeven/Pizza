@@ -4,8 +4,7 @@ export default function Name(props){
         <>
             <div className="title">
                 <h1>Name</h1>
-                <p>*</p>
-                {error?<p>{errorMessages}</p>:""}
+                {error?<p>* {errorMessages}</p>:""}
             </div>
             
             <label>

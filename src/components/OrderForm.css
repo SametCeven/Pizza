@@ -11,7 +11,7 @@
     row-gap: 5rem;
 }
 
-/* Header bölümü için CSS */
+/* CSS for Header component */
 .header{
     background-color:#CE2829;
     height: 7rem;
@@ -37,11 +37,13 @@
     color: white;
 }
 
-/* Explanation bölümü için CSS */
+/*CSS for explanation part in OrderForm component */
 .exp{
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid gray;
 }
 .exp h1{
     font-size: 1.3rem;
@@ -52,27 +54,104 @@
     line-height: 2rem;
 }
 
-/* Tüm formlardaki ortak bölümler için CSS */
+/* CSS for shared items in all forms */
 form{
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: 5rem;
 }
 .title{
     display: flex;
     font-weight: 600;
+    margin-bottom: 1rem;
 }
 .title p{
     color:#CE2829;
-    margin-left: 0.2rem;
+    margin-left: 0.5rem;
 }
 .title h2{
     font-weight: 400;
-}
-.title-check{
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    margin-bottom: 2rem;
+    margin-left: 0.5rem;
 }
 
+/*CSS for Radio component */
+.input-radio{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+.input-radio input{
+    margin-right: 0.5rem;
+}
+
+/*CSS for Check component */
+.input-check{
+}
+.input-check input{
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/*CSS for OrderFooter component */
+.order-footer{
+    display: flex;
+    flex-direction: column;
+}
+
+/*CSS for OrderFooter component, order-counter */
+.order-counter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 4.5rem;
+    margin: 1rem 0;
+    border: 1px solid #5F5F5F;
+    border-radius: 5px;
+}
+.order-counter p{
+    width: 1rem;
+    text-align: center;
+    padding: 0 1rem;
+}
+.order-counter button{
+    border:none;
+    background-color: #FDC913;
+}
+.order-counter button:hover{
+    background-color: #FAF7F2;
+}
+
+/*CSS for OrderFooter component, order-total */
+.order-total{
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    padding: 3rem 3rem;
+    row-gap: 1.5rem;
+    margin-bottom: 10rem;
+    border: 1px solid #5F5F5F;
+    border-radius: 5px;
+}
+.order-total button{
+    background-color: #FDC913;
+    color: black;
+    font-weight: 600;
+}
+.order-detail{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+.order-detail h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.order-amount-total{
+    font-size: 1rem;
+    color:#CE2829;
+    font-weight: 600;
+}
+.order-amount{
+    display: flex;
+    justify-content: space-between;
+}

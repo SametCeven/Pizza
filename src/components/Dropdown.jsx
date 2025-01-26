@@ -4,8 +4,7 @@ export default function Dropdown(props){
         <>
             <div className="title">
                 <h1>Select Crust Type</h1>
-                <p>*</p>
-                {error?<p>{errorMessages}</p>:""}
+                {error?<p>* {errorMessages}</p>:""}
             </div>
             <div>    
                 <select id="dropdown" name="crust" onChange={handleChange}>

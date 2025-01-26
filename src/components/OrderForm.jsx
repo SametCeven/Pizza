@@ -15,6 +15,10 @@ const initialFormData = {
     name:"",
     note:"",
     pizzaCount:1,
+    toppingsCounter:0,
+    toppingsAmount:0,
+    amount:0,
+    totalAmount:0,
 }
 
 const initialError = {
@@ -85,9 +89,8 @@ export default function SiparisFormu(){
     function handleSubmit(event){
         event.preventDefault();
         axios.post("https://reqres.in/api/pizza",formData)
-        .then((response)=>console.log(response))
+        .then((response)=>console.log(response.data))
         .catch((error)=>console.log(error))
-        console.log("submit")
     }
 
     useEffect(()=>{
@@ -96,6 +99,30 @@ export default function SiparisFormu(){
         }else setIsValid(false);
     },[error])
     
+    useEffect(()=>{
+        setFormData({...formData,["toppingsCounter"]:formData.toppings.length});
+    },[formData.toppings])
+
+    useEffect(()=>{
+        let tempNum = Number(formData.toppingsCounter) * 5
+        let temp = (Math.round(tempNum * 100) / 100).toFixed(2);
+        setFormData({...formData,["toppingsAmount"]:temp});
+    },[formData.toppingsCounter])
+
+    useEffect(()=>{
+        let tempNum = 85.5 + Number(formData.toppingsAmount)
+        let temp = (Math.round(tempNum * 100) / 100).toFixed(2)
+        setFormData({...formData,["amount"]:temp});
+    },[formData.toppingsAmount])
+
+    useEffect(()=>{
+        let tempNum = Number(formData.amount) * Number(formData.pizzaCount)
+        let temp = (Math.round(tempNum * 100) / 100).toFixed(2)
+        setFormData({...formData,["totalAmount"]:temp});
+    },[formData.amount])
+
+    console.log(formData)
+
     return (
         <div className="wrapper">
 
@@ -108,33 +135,46 @@ export default function SiparisFormu(){
                 </div>
 
                 <form onSubmit={handleSubmit}>
-                    <Radio 
-                        handleChange={handleChange}
-                        error = {error.size}
-                        errorMessages = {errorMessages.size}
-                        ></Radio>
-                    <Dropdown 
-                        handleChange={handleChange}
-                        error = {error.crust}
-                        errorMessages = {errorMessages.crust}
-                        ></Dropdown>
-                    <Checkbox 
-                        handleChange={handleChange}
-                        error = {error.toppings}
-                        errorMessages = {errorMessages.toppings}
-                        toppingsInitial = {toppingsInitial}
-                        ></Checkbox>
+                    <div>
+                        <Radio 
+                            handleChange={handleChange}
+                            error = {error.size}
+                            errorMessages = {errorMessages.size}
+                            ></Radio>
+                    </div>
+                    <div>
+                        <Dropdown 
+                            handleChange={handleChange}
+                            error = {error.crust}
+                            errorMessages = {errorMessages.crust}
+                            ></Dropdown>
+                    </div>
+                    <div>
+                        <Checkbox 
+                            handleChange={handleChange}
+                            error = {error.toppings}
+                            errorMessages = {errorMessages.toppings}
+                            toppingsInitial = {toppingsInitial}
+                            ></Checkbox>
+                    </div>
+                    <div>
                     <Name 
                         handleChange={handleChange}
                         error = {error.name}
                         errorMessages = {errorMessages.name}
                         ></Name>
+                    </div>
+                    <div>
                     <OrderFooter 
                         handleClick = {handleClick}
                         pizzaCount = {formData.pizzaCount}
                         handleChange = {handleChange}
                         isValid = {isValid}
+                        toppingsAmount = {formData.toppingsAmount}
+                        amount = {formData.amount}
+                        totalAmount = {formData.totalAmount}
                         ></OrderFooter>
+                    </div>
                 </form>
 
             </div>

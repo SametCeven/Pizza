@@ -115,4 +115,7 @@ form{
     .input-check{
         width: 50%;
     }
+    .wrapper Footer{
+        display: none;
+    }
 }

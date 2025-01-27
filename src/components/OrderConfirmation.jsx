@@ -11,7 +11,7 @@ export default function OrderConfirmation(props){
                         <header>
                             <img src="../images/iteration-1-images/logo.svg" alt="logo-conf" className="conf-logo"/>
                             <h2 className="satisfy">order is on the way!</h2>
-                            <h1>ORDER RECEIVED</h1>
+                            <h1>ORDER RECEIVED!</h1>
                         </header>
                         <main>
                             <h3>Poistion Absolute Acı Pizza</h3>

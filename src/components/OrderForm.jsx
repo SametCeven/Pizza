@@ -196,9 +196,9 @@ export default function SiparisFormu(props){
                 </form>
 
             </div>
-            
+            <Footer></Footer>
         </div>
-        <Footer></Footer>
+        
         </>
     )
 }

@@ -92,3 +92,30 @@
     display: flex;
     justify-content: space-between;
 }
+
+
+/* CSS for mobile adjustment */
+@media(max-width:650px){
+    .order-conf-container main{
+        display: none;
+    }
+    .order-conf-wrapper Footer{
+        display: none;
+    }
+    .order-conf-container header h2{
+        display: none;
+    }
+    .order-conf-container header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .order-conf-container header img{
+        margin-top: 7rem;
+    }
+    .order-conf-container header h1{
+        border: none;
+        text-align: center;
+        margin-top: 15rem;
+    }
+}

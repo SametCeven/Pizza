@@ -41,7 +41,8 @@ const toppingsInitial = ["Pepperoni","Chicken","Corn","Garlic","Pineapple","Saus
 const radioValuesInitial = ["Small","Medium","Large"];
 const dropdownValuesInitial = ["Select Crust Type","Thin","Medium","Thick"];
 
-export default function SiparisFormu(){
+export default function SiparisFormu(props){
+    const {handleData,handleError} = props;
     const [formData,setFormData] = useState(initialFormData);
     const [error,setError] = useState(initialError);
     const [isValid,setIsValid] = useState(false);
@@ -94,8 +95,14 @@ export default function SiparisFormu(){
     function handleSubmit(event){
         event.preventDefault();
         axios.post("https://reqres.in/api/pizza",formData)
-        .then((response)=>console.log(response.data))
-        .catch((error)=>console.log(error))
+        .then((response)=>{
+            console.log(response.data);
+            handleData(response.data);
+        })
+        .catch((error)=>{
+            console.log(error);
+            handleError(error);
+        })
         history.push("/OrderConfirmation");
     }
 
@@ -128,7 +135,6 @@ export default function SiparisFormu(){
     },[formData.amount,formData.pizzaCount])
 
 
-    
     return (
         <div className="wrapper">
 

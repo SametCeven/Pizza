@@ -1,17 +1,93 @@
-.order-conf{
+/* CSS for in case of api error */
+.error{
     background-color: #CE2829;
-    width: 100vw;
     height: 100vh;
+    width: 100vw;
+    color: white;
+    padding-top: 25rem;
+    line-height: 2;
+}
+
+/* CSS for container */
+.order-conf-wrapper{
+    background-color: #CE2829;
+    text-align: center;
+    height: 100vh;
+}
+.order-conf-container{
+    display: flex;
+    flex-direction: column;
+    margin:0rem 5rem;
+}
+
+/* CSS for header */
+.order-conf-container header img{
+    width: 17rem;
+    margin-top: 3rem;
+}
+.order-conf-container header .satisfy{
+    font-family: "Satisfy";
+    font-size: 1.5rem;
+    color:#FDC913;
+    margin-top: 3rem;
+}
+.order-conf-container header h1{
+    font-size: 3.5rem;
+    color: white;
+    margin-top: 1rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid white;
+}
+
+/* CSS for main */
+.order-conf-container main{
+    color:white;
+    text-align: left;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.order-conf-container main h3{
     text-align: center;
 }
-
-.order-conf h1{
-    color:white;
-    font-size: 3rem;
-    margin-top: 10rem;
-    line-height: 1.5;
+.order-conf-detail{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+.order-conf-detail div{
+    display: flex;
+    column-gap: 0.5rem;
+    color:#FAF7F2;
+    align-items: center;
+}
+.order-conf-detail .order-conf-toppings p{
+    
+}
+.order-conf-val{
+    font-weight: 600;
+    color: white;
+    font-size: 0.8rem;
 }
 
-.order-conf img{
-    margin-top: 5rem;
+/* CSS for amount section */
+.order-conf-amount-head{
+    margin-top: 3rem;
+    border: 1px solid #FAF7F2;
+    padding: 2rem 2rem;
+    border-radius: 5px;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+.order-conf-amount-head h4{
+    margin-bottom: 1rem;
+}
+.order-conf-amount {
+    display: flex;
+    justify-content: space-between;
 }

@@ -37,7 +37,9 @@ const errorMessages = {
     name: "Name needs to be at least 3 characters!"
 }
 
-const toppingsInitial = ["Pepperoni","Chicken","Corn","Garlic","Pineapple","Sausage","Onion","Sucuk","Green Pepper","Zucchini","Ham","Tomato","Jalepeno"]
+const toppingsInitial = ["Pepperoni","Chicken","Corn","Garlic","Pineapple","Sausage","Onion","Sucuk","Green Pepper","Zucchini","Ham","Tomato","Jalepeno"];
+const radioValuesInitial = ["Small","Medium","Large"];
+const dropdownValuesInitial = ["Select Crust Type","Thin","Medium","Thick"];
 
 export default function SiparisFormu(){
     const [formData,setFormData] = useState(initialFormData);
@@ -75,7 +77,7 @@ export default function SiparisFormu(){
             if(value==="") setError({...error,[name]:true})
                 else setError({...error,[name]:false})
         }if(name==="crust"){
-            if(value==="Crust") setError({...error,[name]:true})
+            if(value==="Select Crust Type") setError({...error,[name]:true})
                 else setError({...error,[name]:false})
         }if(name==="name"){
             if(value.length<3) setError({...error,[name]:true})
@@ -126,6 +128,7 @@ export default function SiparisFormu(){
     },[formData.amount,formData.pizzaCount])
 
 
+    
     return (
         <div className="wrapper">
 
@@ -144,6 +147,7 @@ export default function SiparisFormu(){
                                 handleChange={handleChange}
                                 error = {error.size}
                                 errorMessages = {errorMessages.size}
+                                radioValuesInitial = {radioValuesInitial}
                                 ></Radio>
                         </div>
                         <div>
@@ -151,6 +155,7 @@ export default function SiparisFormu(){
                                 handleChange={handleChange}
                                 error = {error.crust}
                                 errorMessages = {errorMessages.crust}
+                                dropdownValuesInitial = {dropdownValuesInitial}
                                 ></Dropdown>
                         </div>
                     </div>

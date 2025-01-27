@@ -8,6 +8,7 @@ import Dropdown from "./Dropdown.jsx";
 import Checkbox from "./Checkbox.jsx";
 import Name from "./Name.jsx";
 import OrderFooter from "./OrderFooter.jsx";
+import Footer from "./Footer.jsx";
 
 
 const initialFormData = {
@@ -136,6 +137,7 @@ export default function SiparisFormu(props){
 
 
     return (
+        <>
         <div className="wrapper">
 
             <Header></Header>
@@ -194,6 +196,9 @@ export default function SiparisFormu(props){
                 </form>
 
             </div>
+            
         </div>
+        <Footer></Footer>
+        </>
     )
 }

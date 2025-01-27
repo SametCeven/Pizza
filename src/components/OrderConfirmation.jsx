@@ -1,12 +1,12 @@
 import "./OrderConfirmation.css";
+import Footer from "./Footer.jsx"
 export default function OrderConfirmation(props){
     const {data,apiError} = props;
     const {size,crust,toppings,toppingsAmount,totalAmount} = data;
     return(
         <>
             {apiError==="" ? 
-            <
-                div className="order-conf-wrapper">   
+                <div className="order-conf-wrapper">   
                     <div className="order-conf-container">
                         <header>
                             <img src="../images/iteration-1-images/logo.svg" alt="logo-conf" className="conf-logo"/>
@@ -42,6 +42,7 @@ export default function OrderConfirmation(props){
                             </section>
                         </main>
                     </div>
+                    <Footer></Footer>
                 </div>: 
 
                 <h1 className="error">Connection Error, Order is not Completed!</h1>}

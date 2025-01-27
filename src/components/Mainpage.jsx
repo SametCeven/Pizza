@@ -1,5 +1,6 @@
 import "./Mainpage.css";
 import {useHistory} from "react-router-dom";
+import Footer from "./Footer.jsx";
 
 export default function Mainpage(){
     let history = useHistory()
@@ -7,6 +8,7 @@ export default function Mainpage(){
         history.push("/OrderForm");
     }
     return(
+        <div>
         <div className="mainpage-container">
             <img src="../images/iteration-1-images/home-banner.png" alt="banner-mainpage" className="mainpage-bgimg"/>
             <img src="../images/iteration-1-images/logo.svg" alt="logo-mainpage" className="mainpage-logo"/>
@@ -16,6 +18,8 @@ export default function Mainpage(){
                 <span>PİZZA, DOYURUR</span>
             </h1>
             <button onClick={handleClick}>ACIKTIM</button>
+        </div>
+        <Footer></Footer>
         </div>
     )
 }

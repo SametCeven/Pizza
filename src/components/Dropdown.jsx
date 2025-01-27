@@ -2,10 +2,10 @@ export default function Dropdown(props){
     const {handleChange,error,errorMessages} = props;
     return(
         <>
-            <div className="title">
+            <dd className="title">
                 <h1>Select Crust Type</h1>
                 {error?<p>* {errorMessages}</p>:""}
-            </div>
+            </dd>
             <div>    
                 <select id="dropdown" name="crust" onChange={handleChange}>
                     <option value="Crust">Select Crust Type</option>

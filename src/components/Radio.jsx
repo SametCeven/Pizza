@@ -1,13 +1,12 @@
 export default function Radio(props){
     const {handleChange,error,errorMessages} = props;
-
     
     return(
         <>
-            <div className="title">
+            <dd className="title">
                 <h1>Select Size</h1>
                 {error?<p>* {errorMessages}</p>:""}
-            </div>
+            </dd>
             <div className="input-radio">
                 <div>
                     <input type="radio" value="Small" id="small" name="size" onChange={handleChange}/>
@@ -25,3 +24,4 @@ export default function Radio(props){
         </>
     )
 }
+

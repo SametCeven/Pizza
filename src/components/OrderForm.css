@@ -25,19 +25,17 @@
     width: 15rem;
     margin-top: 1rem;
 }
-
 .nav{
     display: flex;
     gap: 1rem;
     font-size:12px;
 }
-
 .nav a{
     text-decoration: none;
     color: white;
 }
 
-/*CSS for explanation part in OrderForm component */
+/*CSS for explanation section in OrderForm component */
 .exp{
     display: flex;
     flex-direction: column;
@@ -103,82 +101,16 @@ form{
     margin-bottom: 0.5rem;
 }
 
-/*CSS for OrderFooter component */
-.order-footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-/*CSS for OrderFooter component, order-counter */
-.order-counter{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 1rem 0;
-    border: 1px solid #5F5F5F;
-    border-radius: 5px;
-}
-.order-counter p{
-    width: 2.5rem;
-    text-align: center;
-    padding: 0 1rem;
-}
-.order-counter button{
-    border:none;
-    background-color: #FDC913;
-    height: 2.5rem;
-    width: 2.5rem;
-    border-radius: 5px;
-}
-.order-counter button:hover{
-    background-color: #292929;
-    color: white;
-}
-
-/*CSS for OrderFooter component, order-total */
-.order-note{
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid gray;
-}
-.order-total{
-    display: flex;
-    flex-direction: column;
-    width: 25rem;
-    padding: 2rem 2rem;
-    margin-bottom: 1rem;
-    border: 1px solid #5F5F5F;
-    border-radius: 5px;
-}
-.order-total button:enabled{
-    background-color: #FDC913;
-    color: black;
-    font-weight: 600;
-    height: 3rem;
-    
-}
-.order-detail{
-    display: flex;
-    flex-direction: column;
-    row-gap: 0.5rem;
-}
-.order-detail h1{
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-.order-amount-total{
-    font-size: 1rem;
-    color:#CE2829;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-.order-amount{
-    display: flex;
-    justify-content: space-between;
-}
 
 /*Mobile adjustments*/
-@media(max-width:600px){
+@media(max-width:650px){
+    .content-wrapper{
+        margin:1.5rem 2rem 10rem 2rem;
+    }
+    .form-sub1{
+        column-gap: 0rem;
+    }
     .input-check{
         width: 50%;
     }

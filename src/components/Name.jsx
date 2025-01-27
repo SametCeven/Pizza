@@ -2,10 +2,10 @@ export default function Name(props){
     const{handleChange,error,errorMessages} = props;
     return(
         <>
-            <div className="title">
+            <dd className="title">
                 <h1>Name</h1>
                 {error?<p>* {errorMessages}</p>:""}
-            </div>
+            </dd>
             
             <label>
                 <input placeholder="Name" onChange={handleChange} name="name"></input>

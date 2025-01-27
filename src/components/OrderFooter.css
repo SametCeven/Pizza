@@ -1,0 +1,107 @@
+/*CSS for OrderFooter component & order-bottom */
+.order-footer{
+    display: flex;
+    flex-direction: column;
+}
+.order-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: self-start;
+    margin: 3rem 1rem 1rem 0rem;
+}
+
+/*CSS for OrderFooter component, order-counter */
+.order-counter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #5F5F5F;
+    border-radius: 5px;
+    
+}
+.order-counter p{
+    width: 2.5rem;
+    text-align: center;
+    padding: 0 1rem;
+}
+.order-counter button{
+    border:none;
+    background-color: #FDC913;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 5px;
+}
+.order-counter button:hover{
+    background-color: #292929;
+    color: white;
+}
+
+/*CSS for OrderFooter component, order-total */
+.order-note{
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #5F5F5F;
+}
+.order-total{
+    border: 1px solid #5F5F5F;
+    border-radius: 5px;
+}
+.order-total button:enabled{
+    background-color: #FDC913;
+    color: black;
+    font-weight: 600;
+    height: 3rem;
+    width: 100%;
+    margin-top: 0;
+    border: none;
+    border-radius: 5px;
+}
+.order-detail{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 2rem 2rem;
+    border-radius: 5px;
+}
+.order-detail h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.order-detail h2{
+    margin-right: 3rem;
+}
+.order-amount-total{
+    font-size: 1rem;
+    color:#CE2829;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.order-amount{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Mobile adjustments*/
+@media(max-width:650px){
+    .order-bottom{
+        margin: 3rem 0rem 5rem 0rem;
+        flex-direction: column-reverse;
+    }
+    .order-counter{
+        position: relative;
+        top:5.2rem;
+    }
+    .order-total{
+        border:none;
+    }
+    .order-total .order-detail{
+        position: absolute;
+        border:1px solid #5F5F5F;        
+    }
+    .order-total button:enabled{
+        position: relative;
+        left: 11rem;
+        top: 13rem;
+        width: 7rem;
+        margin-bottom: 5rem;
+    }
+}

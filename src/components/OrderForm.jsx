@@ -131,11 +131,11 @@ export default function SiparisFormu(){
 
             <Header></Header>
             <div className="content-wrapper">
-                <div className="exp">
+                <section className="exp">
                     <h1>Position Absolute Spicy Pizza</h1>
                     <h1>85.50 ₺</h1>
                     <p>Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.</p>
-                </div>
+                </section>
 
                 <form onSubmit={handleSubmit}>
                     <div className="form-sub1">

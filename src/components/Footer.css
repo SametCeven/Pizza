@@ -1,11 +1,24 @@
 /*CSS for footer */
 .footer {
-    background-color: #292929;
+    display: flex;
+    flex-direction: column;
+    background-color:#292929;
     color: white;
+    font-size: 0.7rem;
+    padding: 2rem;
+}
+.footer-sub {
     display: flex;
     justify-content: space-around;
-    padding: 2rem;
-    font-size: 0.7rem;
+}
+
+/*CSS for footer span */
+.footer-span{
+    margin-top: 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid #FAF7F2;
+    display: flex;
+    justify-content: space-around;
 }
 
 /*CSS for footer-info */
@@ -61,4 +74,17 @@
     width: 30%;
     margin-bottom: 1rem;
     padding-right: 0.5rem;
+}
+
+
+/*CSS for mobile adjusment */
+@media(max-width:600px){
+    .footer-sub {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4rem;
+    }
+    .footer-span{
+        justify-content: space-between;
+    }
 }

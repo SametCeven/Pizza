@@ -4,10 +4,6 @@ export default function Header(){
     return(
         <header className="header">
             <img className="header-logo" src="../images/iteration-1-images/logo.svg"></img>
-            <nav className="nav">
-                <Link to="/">Mainpage</Link>
-                <Link to="/OrderForm">Create Order</Link>
-            </nav>
         </header>
     )
 }

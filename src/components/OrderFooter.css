@@ -10,6 +10,17 @@
     margin: 3rem 1rem 1rem 0rem;
 }
 
+/*CSS for OrderFooter component, order-note */
+.order-note{
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #5F5F5F;
+}
+.order-note textarea{
+    background-color: #FAF7F2;
+    border: none;
+    border-radius: 5px;
+}
+
 /*CSS for OrderFooter component, order-counter */
 .order-counter{
     display: flex;
@@ -17,7 +28,6 @@
     align-items: center;
     border: 1px solid #5F5F5F;
     border-radius: 5px;
-    
 }
 .order-counter p{
     width: 2.5rem;
@@ -37,10 +47,6 @@
 }
 
 /*CSS for OrderFooter component, order-total */
-.order-note{
-    padding-bottom: 3rem;
-    border-bottom: 1px solid #5F5F5F;
-}
 .order-total{
     border: 1px solid #5F5F5F;
     border-radius: 5px;
@@ -81,7 +87,7 @@
 }
 
 /*Mobile adjustments*/
-@media(max-width:650px){
+@media(max-width:750px){
     .order-bottom{
         margin: 3rem 0rem 5rem 0rem;
         flex-direction: column-reverse;

@@ -1,12 +1,11 @@
 /* CSS for OrderForm component */
 .wrapper{
+    font-family: "Barlow";
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .content-wrapper{
-    margin:1.5rem 5rem 0rem 5rem;
-    max-width: 80rem;
     display: flex;
     flex-direction: column;
     row-gap: 1.5rem;
@@ -20,29 +19,44 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 1.3rem;
 }
 .header-logo{
     width: 15rem;
     margin-top: 1rem;
 }
-.nav{
+
+/* CSS for content-wrapper-sub1/sub2 */
+.content-wrapper-sub1{
+    background-color: #FAF7F2;
     display: flex;
-    gap: 1rem;
-    font-size:12px;
+    flex-direction: column;
+    padding: 0rem 10rem;
 }
-.nav a{
+.content-wrapper-sub1 img{
+    margin-bottom: 3rem;
+}
+.content-wrapper-sub2{
+    padding: 0 10rem;
+}
+.content-wrapper-sub1 .form-nav{
+    margin-bottom: 2rem;
+}
+.content-wrapper-sub1 .form-nav a{
     text-decoration: none;
-    color: white;
+    color: black;
+    margin-right: 1rem;
 }
+.content-wrapper-sub1 .form-nav .imp{
+    color: #CE2829;
+}
+
 
 /*CSS for explanation section in OrderForm component */
 .exp{
+    padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid gray;
+    row-gap: 1.5rem;
 }
 .exp h1{
     font-size: 1.3rem;
@@ -51,6 +65,17 @@
 .exp p{
     font-size: 1rem;
     line-height: 1.5rem;
+}
+.exp-detail{
+    display: flex;
+    justify-content: space-between;
+}
+.exp .exp-d1{
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.exp .exp-d2 span{
+    margin-right: 1rem;
 }
 
 /* CSS for shared items in all forms */
@@ -83,13 +108,33 @@ form{
 
 /*CSS for Radio component */
 .input-radio{
-    display: flex;
-    flex-direction: column;
-    row-gap: 0.5rem;
     width: 10rem;
+    display: flex;
+    gap: 0.5rem;
 }
-.input-radio input{
-    margin-right: 0.5rem;
+.input-radio .radio-i{
+    height: 0;
+    width: 0;
+}
+.input-radio .radio-l{
+    position:relative;
+    background-color: #FAF7F2;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    width: 2.5rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+.radio-l:has(.radio-i:checked){
+    background-color: #FDC913;
+}
+
+/*CSS for Dropdown component */
+#dropdown{
+    background-color: #FAF7F2;
+    width: 12rem;
+    height: 3rem;
+    border-radius: 5px;
 }
 
 /*CSS for Check component */
@@ -102,12 +147,20 @@ form{
     margin-bottom: 0.5rem;
 }
 
-
+/*CSS for Radio component */
+.form-name input{
+    background-color:#FAF7F2;
+    border: none;
+    border-radius: 5px;
+}
 
 /*Mobile adjustments*/
-@media(max-width:650px){
-    .content-wrapper{
-        margin:1.5rem 2rem 10rem 2rem;
+@media(max-width:750px){
+    .content-wrapper-sub1{
+        padding: 0rem 1.5rem;
+    }
+    .content-wrapper-sub2{
+        padding: 0rem 1.5rem;
     }
     .form-sub1{
         column-gap: 0rem;

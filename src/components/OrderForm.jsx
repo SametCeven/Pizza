@@ -1,5 +1,5 @@
 import {useState,useEffect} from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory,Link } from "react-router-dom";
 import axios from "axios";
 import "./OrderForm.css";
 import Header from "./Header.jsx"; 
@@ -39,8 +39,8 @@ const errorMessages = {
 }
 
 const toppingsInitial = ["Pepperoni","Chicken","Corn","Garlic","Pineapple","Sausage","Onion","Sucuk","Green Pepper","Zucchini","Ham","Tomato","Jalepeno"];
-const radioValuesInitial = ["Small","Medium","Large"];
-const dropdownValuesInitial = ["Select Crust Type","Thin","Medium","Thick"];
+const radioValuesInitial = ["S","M","L"];
+const dropdownValuesInitial = ["---Select Crust Type---","Thin","Medium","Thick"];
 
 export default function SiparisFormu(props){
     const {handleData,handleError} = props;
@@ -79,7 +79,7 @@ export default function SiparisFormu(props){
             if(value==="") setError({...error,[name]:true})
                 else setError({...error,[name]:false})
         }if(name==="crust"){
-            if(value==="Select Crust Type") setError({...error,[name]:true})
+            if(value===dropdownValuesInitial[0]) setError({...error,[name]:true})
                 else setError({...error,[name]:false})
         }if(name==="name"){
             if(value.length<3) setError({...error,[name]:true})
@@ -142,59 +142,72 @@ export default function SiparisFormu(props){
 
             <Header></Header>
             <div className="content-wrapper">
-                <section className="exp">
-                    <h1>Position Absolute Spicy Pizza</h1>
-                    <h1>85.50 ₺</h1>
-                    <p>Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.</p>
-                </section>
-
-                <form onSubmit={handleSubmit}>
-                    <div className="form-sub1">
-                        <div>
-                            <Radio 
-                                handleChange={handleChange}
-                                error = {error.size}
-                                errorMessages = {errorMessages.size}
-                                radioValuesInitial = {radioValuesInitial}
-                                ></Radio>
+                <div className="content-wrapper-sub1">
+                    <img src="../images/iteration-2-images/pictures/form-banner.png" alt="" />
+                    <nav className="form-nav">
+                        <Link to="/">Mainpage</Link>
+                        <Link to="/OrderForm" className="imp">Create Order</Link>
+                    </nav>
+                    <section className="exp">
+                        <h1>Position Absolute Spicy Pizza</h1>
+                        <div className="exp-detail">
+                            <span class="exp-d1">85.50 ₺</span>
+                            <div className="exp-d2">
+                                <span>4.9</span>
+                                <span>(200)</span>
+                            </div>
+                        </div>
+                        <p>Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizza is life.Pizz</p>
+                    </section>
+                </div>
+                <div className="content-wrapper-sub2">
+                    <form onSubmit={handleSubmit}>
+                        <div className="form-sub1">
+                            <div className="form-sub1-radio">
+                                <Radio 
+                                    handleChange={handleChange}
+                                    error = {error.size}
+                                    errorMessages = {errorMessages.size}
+                                    radioValuesInitial = {radioValuesInitial}
+                                    ></Radio>
+                            </div>
+                            <div>
+                                <Dropdown 
+                                    handleChange={handleChange}
+                                    error = {error.crust}
+                                    errorMessages = {errorMessages.crust}
+                                    dropdownValuesInitial = {dropdownValuesInitial}
+                                    ></Dropdown>
+                            </div>
                         </div>
                         <div>
-                            <Dropdown 
+                            <Checkbox 
                                 handleChange={handleChange}
-                                error = {error.crust}
-                                errorMessages = {errorMessages.crust}
-                                dropdownValuesInitial = {dropdownValuesInitial}
-                                ></Dropdown>
+                                error = {error.toppings}
+                                errorMessages = {errorMessages.toppings}
+                                toppingsInitial = {toppingsInitial}
+                                ></Checkbox>
                         </div>
-                    </div>
-                    <div>
-                        <Checkbox 
+                        <div className="form-name">
+                        <Name 
                             handleChange={handleChange}
-                            error = {error.toppings}
-                            errorMessages = {errorMessages.toppings}
-                            toppingsInitial = {toppingsInitial}
-                            ></Checkbox>
-                    </div>
-                    <div>
-                    <Name 
-                        handleChange={handleChange}
-                        error = {error.name}
-                        errorMessages = {errorMessages.name}
-                        ></Name>
-                    </div>
-                    <div>
-                    <OrderFooter 
-                        handleClick = {handleClick}
-                        pizzaCount = {formData.pizzaCount}
-                        handleChange = {handleChange}
-                        isValid = {isValid}
-                        toppingsAmount = {formData.toppingsAmount}
-                        amount = {formData.amount}
-                        totalAmount = {formData.totalAmount}
-                        ></OrderFooter>
-                    </div>
-                </form>
-
+                            error = {error.name}
+                            errorMessages = {errorMessages.name}
+                            ></Name>
+                        </div>
+                        <div>
+                        <OrderFooter 
+                            handleClick = {handleClick}
+                            pizzaCount = {formData.pizzaCount}
+                            handleChange = {handleChange}
+                            isValid = {isValid}
+                            toppingsAmount = {formData.toppingsAmount}
+                            amount = {formData.amount}
+                            totalAmount = {formData.totalAmount}
+                            ></OrderFooter>
+                        </div>
+                    </form>
+                </div>
             </div>
             <Footer></Footer>
         </div>

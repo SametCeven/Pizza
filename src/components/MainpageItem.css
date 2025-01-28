@@ -2,6 +2,7 @@
 .mainpage-menuitem{
     font-family: "Barlow";
     background-color: white;
+    max-width: 20rem;
     width: 33%;
     padding: 1rem;
     margin: 0rem 0.5rem;

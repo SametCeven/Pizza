@@ -1,11 +1,12 @@
 /*CSS for footer */
 .footer {
-    display: flex;
-    flex-direction: column;
     background-color:#292929;
     color: white;
+    font-family: "Barlow";
     font-size: 0.7rem;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 .footer-sub {
     display: flex;
@@ -23,19 +24,19 @@
 
 /*CSS for footer-info */
 .footer-info{
+    width: 15rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     row-gap: 1rem;
-    width: 15rem;
 }
 .footer-info div{
     display: flex;
     align-items: first baseline;
 }
 .footer-info img{
-    margin-right: 1rem;
     width: 1rem;
+    margin-right: 1rem;
 }
 .footer-info p{
     text-align: left;   
@@ -47,16 +48,16 @@
 
 /*CSS for footer-menu */
 .footer-menu{
+    width: 12rem;
+    margin-top: 1.6rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     row-gap: 1rem;
-    margin-top: 1.6rem;
-    width: 12rem;
 }
 .footer-menu h1{
-    margin-bottom: 0.7rem;
     font-size: 1.2rem;
+    margin-bottom: 0.7rem;
 }
 
 /*CSS for footer-insta */
@@ -65,10 +66,10 @@
     text-align: left;
 }
 .footer-insta h1{
+    font-size: 1.2rem;
     margin-top:1.6rem;
     margin-bottom: 1.5rem;
     text-align: left;
-    font-size: 1.2rem;
 }
 .footer-insta img{
     width: 30%;
@@ -78,7 +79,7 @@
 
 
 /*CSS for mobile adjusment */
-@media(max-width:600px){
+@media(max-width:750px){
     .footer-sub {
         display: flex;
         flex-direction: column;

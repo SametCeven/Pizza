@@ -1,9 +1,9 @@
 /* CSS for in case of api error */
 .error{
     background-color: #CE2829;
+    color: white;
     height: 100vh;
     width: 100vw;
-    color: white;
     padding-top: 25rem;
     line-height: 2;
 }
@@ -11,14 +11,16 @@
 /* CSS for container */
 .order-conf-wrapper{
     background-color: #CE2829;
+    font-family: "Barlow";
     text-align: center;
     height: 100vh;
 }
 .order-conf-container{
-    display: flex;
-    flex-direction: column;
     margin:0rem 5rem;
     margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* CSS for header */
@@ -27,14 +29,15 @@
     margin-top: 3rem;
 }
 .order-conf-container header .satisfy{
+    color:#FDC913;
     font-family: "Satisfy";
     font-size: 1.5rem;
-    color:#FDC913;
     margin-top: 3rem;
 }
 .order-conf-container header h1{
-    font-size: 3.5rem;
     color: white;
+    font-family: "Roboto Condensed";
+    font-size: 3.5rem;
     margin-top: 1rem;
     padding-bottom: 3rem;
     border-bottom: 1px solid white;
@@ -43,8 +46,9 @@
 /* CSS for main */
 .order-conf-container main{
     color:white;
-    text-align: left;
     margin-top: 2rem;
+    text-align: left;
+    max-width: 20rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,32 +59,31 @@
 }
 .order-conf-detail{
     margin-top: 2rem;
+    max-width: 10rem;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     row-gap: 1rem;
 }
 .order-conf-detail div{
+    color:#FAF7F2;
     display: flex;
     column-gap: 0.5rem;
-    color:#FAF7F2;
     align-items: center;
-}
-.order-conf-detail .order-conf-toppings p{
-    
 }
 .order-conf-val{
     font-weight: 600;
-    color: white;
     font-size: 0.8rem;
+    color: white;
 }
 
 /* CSS for amount section */
 .order-conf-amount-head{
     margin-top: 3rem;
-    border: 1px solid #FAF7F2;
     padding: 2rem 2rem;
-    border-radius: 5px;
     width: 20rem;
+    border: 1px solid #FAF7F2;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
@@ -95,7 +98,7 @@
 
 
 /* CSS for mobile adjustment */
-@media(max-width:650px){
+@media(max-width:750px){
     .order-conf-container main{
         display: none;
     }

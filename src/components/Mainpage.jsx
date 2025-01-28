@@ -1,25 +1,90 @@
 import "./Mainpage.css";
 import {useHistory} from "react-router-dom";
+import {useState} from "react";
 import Footer from "./Footer.jsx";
+import MainpageNav from "./MainpageNav.jsx";
+import MainpageItem from "./MainpageItem.jsx";
+
+const menuItemsInitial = [{
+    img: "../images/iteration-2-images/pictures/food-1.png",
+    title: "Terminal Pizza",
+    price: 60,
+    rating: 4.9,
+    comments: 200,
+},{
+    img: "../images/iteration-2-images/pictures/food-2.png",
+    title: "Position Absolute Acı Pizza",
+    price: 60,
+    rating: 4.9,
+    comments: 200,
+},{
+    img: "../images/iteration-2-images/pictures/food-3.png",
+    title: "useEffect Tavuklu Burger",
+    price: 60,
+    rating: 4.9,
+    comments: 200,
+}]
 
 export default function Mainpage(){
+    const [menuItems,setMenuItems] = useState(menuItemsInitial);
     let history = useHistory()
     function handleClick(){
         history.push("/OrderForm");
     }
     return(
-        <div>
-        <div className="mainpage-container">
-            <img src="../images/iteration-1-images/home-banner.png" alt="banner-mainpage" className="mainpage-bgimg"/>
-            <img src="../images/iteration-1-images/logo.svg" alt="logo-mainpage" className="mainpage-logo"/>
-            <h1>
-                <span>KOD ACIKTIRIR</span>
-                <br></br>
-                <span>PİZZA, DOYURUR</span>
-            </h1>
-            <button onClick={handleClick}>ACIKTIM</button>
-        </div>
-        <Footer></Footer>
+        <div className="mainpage-wrapper">
+            <div className="mainpage-container">
+                <header>
+                    <img src="../images/iteration-1-images/home-banner.png" alt="banner-mainpage" className="mainpage-bgimg"/>
+                    <img src="../images/iteration-1-images/logo.svg" alt="logo-mainpage" className="mainpage-logo"/>
+                    <h2>don't miss offers </h2>
+                    <h1>CODE HUNGERS PIZZA, FILLS</h1>
+                    <button onClick={handleClick}>I'm HUNGRY</button>
+                </header>
+
+                <MainpageNav></MainpageNav>
+
+                <section className="mainpage-hero">
+                    <div className="mainpage-hero-s1">
+                        <h1>Special Lezzetus</h1>
+                        <h2>Position Absolute Acı Burger</h2>
+                        <img src="../images/iteration-2-images/cta/kart-1.png" alt="card1" />
+                        <button onClick={handleClick}>ORDER</button>
+                    </div>
+                    <div className="mainpage-hero-s2">
+                        <div className="mainpage-hero-s21">
+                            <h2>Hackathlon Burger Menu</h2>
+                            <img src="../images/iteration-2-images/cta/kart-2.png" alt="card2" />
+                            <button onClick={handleClick}>ORDER</button>
+                        </div>
+                        <div className="mainpage-hero-s22">
+                            <h2>
+                                <span>Veeeeery </span>
+                                fast delivery like npm
+                            </h2>
+                            <img src="../images/iteration-2-images/cta/kart-3.png" alt="card3" />
+                            <button onClick={handleClick}>ORDER</button>
+                        </div>
+                    </div>
+                </section>
+
+                <div className="mainpage-midtitle">
+                    <h2>most delivered menus</h2>
+                    <h1>Food For Appetizing Codes</h1>
+                </div>
+
+                <MainpageNav></MainpageNav>
+
+                <main>
+                    {menuItems.map((menuItem)=>{
+                        return(
+                            <MainpageItem menuItem={menuItem}></MainpageItem>
+                        )
+                    })}
+                </main>
+                
+            </div>
+            <Footer></Footer>
         </div>
     )
 }

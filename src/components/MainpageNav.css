@@ -1,0 +1,30 @@
+/* CSS for nav part */
+.mainpage-nav{
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    margin:1rem 7rem;
+}
+.mainpage-navitem{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+}
+.mainpage-navitem img{
+    width: 1.5rem;
+    margin-right: 0.5rem;
+}
+.mainpage-navitem a{
+    text-decoration: none;
+    font-family: "Barlow";
+    font-size: 0.8rem;
+    color:black;
+}
+.mainpage-navitem:hover{
+    background-color: #292929;
+    a {
+        color:white;
+    }
+}

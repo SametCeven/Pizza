@@ -1,42 +1,164 @@
-.mainpage-container{
-    position: relative;
-    max-width: 100vw;
-    height: 67.8vh;
+/* CSS for general part */
+.mainpage-wrapper button {
+    font-family: "Barlow";
+}
+.mainpage-container {
+    background-color:#FAF7F2;
+}
+
+/* CSS for header part */
+.mainpage-container header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    position: relative;
 }
-.mainpage-container img{
-    position: absolute;
-}
-.mainpage-container h1{
-    position: absolute;
-}
-.mainpage-container button{
-    position: absolute;
-}
-.mainpage-bgimg{
-    height: 100%;
+.mainpage-container header .mainpage-bgimg{
     width: 100%;
-    object-fit: cover;
 }
-.mainpage-logo{
-    margin: auto 0;
+.mainpage-container header .mainpage-logo{
     margin-top: 5rem;
+    position: absolute;
 }
-.mainpage-container h1{
+.mainpage-container header h1{
     font-size: 3rem;
-    margin-top: 12rem;
-    color: white;
     font-weight: 300;
     line-height: 1.5;
+    color: white;
+    margin-top: 12rem;
+    position: absolute;
+    width: 20rem;
+    text-align: center;
 }
-.mainpage-container button{
+.mainpage-container header h2{
+    font-family: "Satisfy";
+    font-size: 2rem;
+    color:#FDC913;
+    margin-top: 10rem;
+    position: absolute;
+}
+.mainpage-container header button{
+    font-weight: 600;
     background-color:#FDC913;
-    margin-top: 24rem;
-    font-size: 1.5rem;
+    margin-top: 21rem;
+    padding: 1rem 4rem;
     border: none;
     border-radius: 3rem;
-    padding: 1rem 5rem;
+    position: absolute;
+}
+
+/* CSS for section part */
+.mainpage-hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 2rem 0;
+}
+.mainpage-hero div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.mainpage-hero img{
+    border-radius: 5px;
+    width: 20rem;
+}
+.mainpage-hero button{
+    color: #CE2829;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 2rem;
+}
+    /* CSS for section-s1 part */
+.mainpage-hero-s1{
+    position: relative;
+}
+.mainpage-hero-s1 h1{
+    font-family: "Quattrocento";
+    font-size: 3rem;
+    line-height: 3rem;
+    color: white;
+    width: 1rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+.mainpage-hero-s1 h2{
+    font-family: "Barlow";
+    line-height: 3rem;
+    color: white;
+    position: absolute;
+    top: 6.5rem;
+    left: 1rem;
+}
+.mainpage-hero-s1 button{
+    position: absolute;
+    top: 9.5rem;
+    left: 1rem;
+}
+    /* CSS for section-s21 part */
+.mainpage-hero-s21{
+    position: relative;
+}
+.mainpage-hero-s21 h2{
+    font-family: "Barlow";
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    width: 10rem;
+    color: white;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+.mainpage-hero-s21 button{
+    position: absolute;
+    top: 5rem;
+    left: 1rem;
+}
+    /* CSS for section-s22 part */
+.mainpage-hero-s22{
+    position: relative;
+ }
+.mainpage-hero-s22 h2{
+    font-family: "Barlow";
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    width: 10rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+.mainpage-hero-s22 h2 span{
+    color: #CE2829;
+}
+.mainpage-hero-s22 button{
+    position: absolute;
+    top: 5rem;
+    left: 1rem;
+}
+
+/* CSS for midtitle part */
+.mainpage-midtitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+}
+.mainpage-midtitle h2{
+    font-family: "Satisfy";
+    color:#CE2829;
+}
+.mainpage-midtitle h1{
+    font-family: "Barlow";
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* CSS for main part */
+.mainpage-container main{
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 3rem;
 }

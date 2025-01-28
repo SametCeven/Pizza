@@ -1,0 +1,29 @@
+.mainpage-menuitem{
+    font-family: "Barlow";
+    background-color: white;
+    width: 33%;
+    padding: 1rem;
+    margin: 0rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.mainpage-menuitem img{
+    width: 100%;
+}
+.mainpage-menuitem a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    margin:1rem 1rem;
+}
+.mainpage-menuitem-details{
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+.mainpage-menuitem-details-price{
+    font-weight: 600;
+    font-size: 1rem;
+}

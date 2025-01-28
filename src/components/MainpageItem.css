@@ -1,3 +1,4 @@
+/* CSS for main part */
 .mainpage-menuitem{
     font-family: "Barlow";
     background-color: white;
@@ -26,4 +27,12 @@
 .mainpage-menuitem-details-price{
     font-weight: 600;
     font-size: 1rem;
+}
+
+
+/* CSS for mobile adjustment */
+@media(max-width:750px){
+    .mainpage-menuitem{
+        width: 100%;
+    }
 }

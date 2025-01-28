@@ -17,7 +17,7 @@
     width: 100%;
 }
 .mainpage-container header .mainpage-logo{
-    margin-top: 5rem;
+    margin-top: 3rem;
     position: absolute;
 }
 .mainpage-container header h1{
@@ -25,7 +25,7 @@
     font-weight: 300;
     line-height: 1.5;
     color: white;
-    margin-top: 12rem;
+    margin-top: 10rem;
     position: absolute;
     width: 20rem;
     text-align: center;
@@ -34,7 +34,7 @@
     font-family: "Satisfy";
     font-size: 2rem;
     color:#FDC913;
-    margin-top: 10rem;
+    margin-top: 8rem;
     position: absolute;
 }
 .mainpage-container header button{
@@ -45,6 +45,12 @@
     border: none;
     border-radius: 3rem;
     position: absolute;
+}
+
+/* CSS for MainpageNav */
+.mainpage-navwrapper{
+    max-width: 50rem;
+    margin: 0rem auto;
 }
 
 /* CSS for section part */
@@ -148,11 +154,12 @@
 }
 .mainpage-midtitle h2{
     font-family: "Satisfy";
+    font-size:1.5rem;
     color:#CE2829;
 }
 .mainpage-midtitle h1{
     font-family: "Barlow";
-    font-size: 1.3rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 
@@ -160,5 +167,22 @@
 .mainpage-container main{
     display: flex;
     justify-content: space-around;
-    margin: 1rem 3rem;
+    padding: 1rem;
+}
+
+
+/* CSS for mobile adjustment */
+@media(max-width:750px){
+    .mainpage-container header .mainpage-bgimg{
+        height: 50rem;
+        object-fit: cover;
+    }
+    .mainpage-hero{
+        flex-direction: column;
+    }
+    .mainpage-container main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
 }

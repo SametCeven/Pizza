@@ -3,7 +3,7 @@
     font-weight: 600;
     display: flex;
     justify-content: space-between;
-    margin:1rem 7rem;
+    margin:1rem auto;
 }
 .mainpage-navitem{
     background-color: white;
@@ -26,5 +26,17 @@
     background-color: #292929;
     a {
         color:white;
+    }
+}
+
+/* CSS for modile adjustment */
+@media(max-width:750px){
+    .mainpage-nav{
+       flex-direction: row;
+       flex-wrap: wrap;
+       margin: 1rem 2rem;
+    }
+    .mainpage-navitem{
+        width: 50%;
     }
 }

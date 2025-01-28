@@ -8,19 +8,19 @@ import MainpageItem from "./MainpageItem.jsx";
 const menuItemsInitial = [{
     img: "../images/iteration-2-images/pictures/food-1.png",
     title: "Terminal Pizza",
-    price: 60,
+    price: 85.50,
     rating: 4.9,
     comments: 200,
 },{
     img: "../images/iteration-2-images/pictures/food-2.png",
     title: "Position Absolute Acı Pizza",
-    price: 60,
+    price: 85.50,
     rating: 4.9,
     comments: 200,
 },{
     img: "../images/iteration-2-images/pictures/food-3.png",
     title: "useEffect Tavuklu Burger",
-    price: 60,
+    price: 85.50,
     rating: 4.9,
     comments: 200,
 }]
@@ -42,7 +42,9 @@ export default function Mainpage(){
                     <button onClick={handleClick}>I'm HUNGRY</button>
                 </header>
 
-                <MainpageNav></MainpageNav>
+                <div className="mainpage-navwrapper">
+                    <MainpageNav></MainpageNav>
+                </div>
 
                 <section className="mainpage-hero">
                     <div className="mainpage-hero-s1">
@@ -73,7 +75,9 @@ export default function Mainpage(){
                     <h1>Food For Appetizing Codes</h1>
                 </div>
 
-                <MainpageNav></MainpageNav>
+                <div className="mainpage-navwrapper">
+                    <MainpageNav></MainpageNav>
+                </div>
 
                 <main>
                     {menuItems.map((menuItem)=>{

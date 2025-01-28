@@ -95,7 +95,7 @@ export default function SiparisFormu(props){
     
     function handleSubmit(event){
         event.preventDefault();
-        axios.post("https://reqres.in/api/pizza",formData)
+        axios.post("https://reqres.in123545/api/pizza",formData)
         .then((response)=>{
             console.log(response.data);
             handleData(response.data);

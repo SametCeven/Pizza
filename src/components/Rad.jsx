@@ -3,7 +3,7 @@ export default function Rad(props){
     //<span className="radio-s"></span>
     return(
         <div>
-            <label className="radio-l" htmlFor={id}>{value}
+            <label data-cy="radio-label" className="radio-l" htmlFor={id}>{value}
                 <input className="radio-i" type="radio" value={value} id={id} name="size" onChange={handleChange} key={value}/>
                 
             </label>

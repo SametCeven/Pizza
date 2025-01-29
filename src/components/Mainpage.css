@@ -167,7 +167,7 @@
 .mainpage-container main{
     display: flex;
     justify-content: space-around;
-    padding: 1rem;
+    padding: 1rem 10rem;
 }
 
 

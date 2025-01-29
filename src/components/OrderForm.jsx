@@ -95,7 +95,7 @@ export default function SiparisFormu(props){
     
     function handleSubmit(event){
         event.preventDefault();
-        axios.post("https://reqres.in123545/api/pizza",formData)
+        axios.post("https://reqres.in/api/pizza",formData)
         .then((response)=>{
             console.log(response.data);
             handleData(response.data);
@@ -151,7 +151,7 @@ export default function SiparisFormu(props){
                     <section className="exp">
                         <h1>Position Absolute Spicy Pizza</h1>
                         <div className="exp-detail">
-                            <span class="exp-d1">85.50 ₺</span>
+                            <span className="exp-d1">85.50 ₺</span>
                             <div className="exp-d2">
                                 <span>4.9</span>
                                 <span>(200)</span>

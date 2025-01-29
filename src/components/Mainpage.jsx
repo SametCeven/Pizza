@@ -80,9 +80,9 @@ export default function Mainpage(){
                 </div>
 
                 <main>
-                    {menuItems.map((menuItem)=>{
+                    {menuItems.map((menuItem,index)=>{
                         return(
-                            <MainpageItem menuItem={menuItem}></MainpageItem>
+                            <MainpageItem key={index} menuItem={menuItem}></MainpageItem>
                         )
                     })}
                 </main>

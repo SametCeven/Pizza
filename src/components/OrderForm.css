@@ -33,7 +33,9 @@
     padding: 0rem 10rem;
 }
 .content-wrapper-sub1 img{
+    margin: 0 auto;
     margin-bottom: 3rem;
+    width: 50%;
 }
 .content-wrapper-sub2{
     padding: 0 10rem;

@@ -169,17 +169,19 @@ form{
 .check-i:checked ~ .check-s{
     background-color: #FDC913;
 }
-.check.s:After{
+.check-s:after{
     content:"";
     position: absolute;
     display: none;
 }
-.check-i:checked ~ .check-s:After{
+.check-i:checked ~ .check-s:after{
     display: block;
 }
 .check-l .check-s:after{
-    width: 5px;
-    height: 10px;
+    left: 0.8rem;
+    top: 0.4rem;
+    width: 0.5rem;
+    height: 1rem;
     border:solid black;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);

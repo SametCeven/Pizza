@@ -128,7 +128,7 @@ form{
     padding: 0.5rem;
 }
 .radio-l:has(.radio-i:checked){
-    background-color: #FDC913;
+    background-color: #FFEECC;
 }
 
 /*CSS for Dropdown component */
@@ -144,12 +144,50 @@ form{
     display: inline-block;
     width: 30%;
 }
-.input-check input{
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
+.input-check .check-l{
+    display: flex;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-left: 2.5rem;
+    padding-top: 0.5rem;
+}
+.input-check .check-l .check-i{
+    width: 0rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.input-check .check-l .check-s{
+    background-color: #FAF7F2;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.check-i:checked ~ .check-s{
+    background-color: #FDC913;
+}
+.check.s:After{
+    content:"";
+    position: absolute;
+    display: none;
+}
+.check-i:checked ~ .check-s:After{
+    display: block;
+}
+.check-l .check-s:after{
+    width: 5px;
+    height: 10px;
+    border:solid black;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform:rotate(45deg)
 }
 
-/*CSS for Radio component */
+/*CSS for Name component */
 .form-name input{
     background-color:#FAF7F2;
     border: none;

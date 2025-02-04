@@ -1,0 +1,7 @@
+/*CSS for Dropdown component */
+#dropdown{
+    background-color: #FAF7F2;
+    width: 12rem;
+    height: 3rem;
+    border-radius: 5px;
+}

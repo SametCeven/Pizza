@@ -1,5 +1,5 @@
+import "./Radio.css";
 import { useState } from "react";
-import Rad from "./Rad.jsx";
 
 export default function Radio(props){
     const {handleChange,error,errorMessages,radioValuesInitial} = props;
@@ -13,14 +13,24 @@ export default function Radio(props){
             </dd>
             <div className="input-radio">
                 {radioValues.map((value,index)=>{
-                    return(<Rad
-                        type="radio"
-                        name="size"
-                        value={value}
-                        id={value}
-                        key={index}
-                        handleChange={handleChange}
-                    ></Rad>)
+                    return(
+                        <label 
+                            data-cy="radio-label" 
+                            className="radio-l" 
+                            htmlFor={value}
+                            key ={index}>
+                            {value}
+                            <input
+                                className="radio-i"
+                                type="radio"
+                                name="size"
+                                value={value}
+                                id={value}
+                                key={index}
+                                onChange={handleChange}
+                            ></input>
+                        </label>
+                    )
                 })}
             </div>
         </>

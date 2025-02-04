@@ -2,6 +2,7 @@ import './App.css';
 import OrderForm from "./components/OrderForm.jsx";
 import Mainpage from './components/Mainpage.jsx';
 import OrderConfirmation from './components/OrderConfirmation.jsx';
+import ErrorPage from "./components/ErrorPage.jsx"
 import {Switch,Route} from "react-router-dom";
 import {useState} from "react";
 
@@ -25,7 +26,10 @@ export default function App() {
           <OrderForm handleData={handleData} handleError={handleError}></OrderForm>
         </Route>
         <Route path="/OrderConfirmation">
-          <OrderConfirmation data={data} apiError={apiError}></OrderConfirmation>
+          <OrderConfirmation data={data}></OrderConfirmation>
+        </Route>
+        <Route path="/ErrorPage">
+          <ErrorPage apiError={apiError}></ErrorPage>
         </Route>
         
         

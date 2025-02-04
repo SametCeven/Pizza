@@ -36,10 +36,12 @@ export default function Mainpage(){
             <div className="mainpage-container">
                 <header>
                     <img src="../images/iteration-1-images/home-banner.png" alt="banner-mainpage" className="mainpage-bgimg"/>
-                    <img src="../images/iteration-1-images/logo.svg" alt="logo-mainpage" className="mainpage-logo"/>
-                    <h2>don't miss offers </h2>
-                    <h1>CODE HUNGERS PIZZA, FILLS</h1>
-                    <button onClick={handleClick}>I'm HUNGRY</button>
+                    <div>
+                        <img src="../images/iteration-1-images/logo.svg" alt="logo-mainpage" className="mainpage-logo"/>
+                        <h2>don't miss offers </h2>
+                        <h1>CODE HUNGERS PIZZA, FILLS</h1>
+                        <button onClick={handleClick}>I'm HUNGRY</button>
+                    </div>
                 </header>
 
                 <div className="mainpage-navwrapper">

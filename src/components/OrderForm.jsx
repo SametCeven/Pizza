@@ -99,12 +99,14 @@ export default function SiparisFormu(props){
         .then((response)=>{
             console.log(response.data);
             handleData(response.data);
+            history.push("/OrderConfirmation");
         })
         .catch((error)=>{
             console.log(error);
             handleError(error);
+            history.push("/ErrorPage");
         })
-        history.push("/OrderConfirmation");
+        
     }
 
     useEffect(()=>{

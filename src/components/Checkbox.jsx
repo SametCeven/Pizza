@@ -1,4 +1,4 @@
-import Check from "./Check";
+import "./Checkbox.css"
 import {useState} from "react";
 
 
@@ -18,11 +18,27 @@ export default function Checkbox(props){
             </dd>
             <div>
                 {toppings.map((topping,index)=>{
-                    return(<Check 
-                        key={index}
-                        topping = {topping}
-                        handleChange = {handleChange}
-                    />)
+                    return(
+                        <div className="input-check">
+                            <label 
+                                className="check-l" 
+                                htmlFor={topping} 
+                                key={index}
+                                >{topping}
+                                <input 
+                                    className="check-i"
+                                    type="checkbox" 
+                                    name="toppings"
+                                    id={topping}
+                                    key={index}
+                                    value={topping}
+                                    onChange={handleChange}
+                                />
+                                <span className="check-s" key={index+200}></span>
+                            </label>
+
+                        </div>
+                    )
                 })}
             </div>
         </>

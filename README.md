@@ -10,12 +10,9 @@
 
 ----------- OrderForm.jsx ----------------------------------------------- OrderForm.css
 --------------- Header.jsx
---------------- Radio.jsx
-------------------- Rad.jsx
---------------- Dropdown.jsx
-------------------- Drop.jsx
---------------- Checbox.jsx
-------------------- Check.jsx
+--------------- Radio.jsx ----------------------------------------------- Radio.css
+--------------- Dropdown.jsx -------------------------------------------- Dropdown.css
+--------------- Checbox.jsx --------------------------------------------- Checkbox.css
 --------------- OrderFooter.jsx ----------------------------------------- OrderFooter.css
 
 ----------- OrderConfirmation.jsx --------------------------------------- OrderConfirmation.css
@@ -27,14 +24,14 @@ App.jsx ----> handleData(f), handleError(f) ----> OrderForm.jsx ---> handleData(
 
 App.jsx ----> data(obj), apiError ----> OrderConfirmation.jsx
 
-OrderForm.jsx ----> handleChange(f), error(obj), errorMessages(obj), radioValuesInitial(arr) ----> Radio.jsx ----> Rad.jsx
-Radio.jsx ----> Rad.jsx ----> **<ins>formData.size<ins>** is set by handleChange(f) ---> OrderForm.jsx
+OrderForm.jsx ----> handleChange(f), error(obj), errorMessages(obj), radioValuesInitial(arr) ----> Radio.jsx
+Radio.jsx ----> **<ins>formData.size<ins>** is set by handleChange(f) ---> OrderForm.jsx
 
-OrderForm.jsx ----> handleChange(f), error(obj), errorMessages(obj), dropdownValuesInitial(arr) ----> Dropdown.jsx ----> Drop.jsx
-Dropdown.jsx ----> Drop.jsx ----> **<ins>formData.crust<ins>** is set by handleChange(f) ---> OrderForm.jsx
+OrderForm.jsx ----> handleChange(f), error(obj), errorMessages(obj), dropdownValuesInitial(arr) ----> Dropdown.jsx
+Dropdown.jsx ----> **<ins>formData.crust<ins>** is set by handleChange(f) ---> OrderForm.jsx
 
-OrderForm.jsx ----> handleChange(f), error(obj), errorMessages(obj), toppingsInitial(arr) ----> Checkbox.jsx ----> Check.jsx
-Checkbox.jsx ----> Check.jsx ----> **<ins>formData.toppings<ins>** is set by handleChange(f) ---> OrderForm.jsx
+OrderForm.jsx ----> handleChange(f), error(obj), errorMessages(obj), toppingsInitial(arr) ----> Checkbox.jsx
+Checkbox.jsx ----> **<ins>formData.toppings<ins>** is set by handleChange(f) ---> OrderForm.jsx
 
 OrderForm.jsx ----> handleChange(f), error(obj), errorMessages(obj) ----> Name.jsx
 Name.jsx **<ins>formData.name<ins>** is set by handleChange(f) ---> OrderForm.jsx

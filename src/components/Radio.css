@@ -1,0 +1,22 @@
+/*CSS for Radio component */
+.input-radio{
+    width: 10rem;
+    display: flex;
+    gap: 0.5rem;
+}
+.input-radio .radio-i{
+    height: 0;
+    width: 0;
+}
+.input-radio .radio-l{
+    position:relative;
+    background-color: #FAF7F2;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    width: 2.5rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+.radio-l:has(.radio-i:checked){
+    background-color: #FFEECC;
+}

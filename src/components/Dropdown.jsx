@@ -1,5 +1,5 @@
+import "./Dropdown.css"
 import { useState } from "react";
-import Drop from "./Drop.jsx";
 
 export default function Dropdown(props){
     const {handleChange,error,errorMessages,dropdownValuesInitial} = props;
@@ -15,10 +15,7 @@ export default function Dropdown(props){
                 <select id="dropdown" name="crust" onChange={handleChange}>
                     {dropdownValues.map((value,index)=>{
                         return(
-                            <Drop
-                                value={value}
-                                key={index}
-                            ></Drop>
+                            <option value={value} key={index} >{value}</option>
                         )
                     })}
                 </select>

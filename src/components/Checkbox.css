@@ -1,0 +1,56 @@
+/*CSS for Check component */
+.input-check{
+    display: inline-block;
+    width: 30%;
+}
+.input-check .check-l{
+    display: flex;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-left: 2.5rem;
+    padding-top: 0.5rem;
+}
+.input-check .check-l .check-i{
+    width: 0rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.input-check .check-l .check-s{
+    background-color: #FAF7F2;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.check-i:checked ~ .check-s{
+    background-color: #FDC913;
+}
+.check-s:after{
+    content:"";
+    position: absolute;
+    display: none;
+}
+.check-i:checked ~ .check-s:after{
+    display: block;
+}
+.check-l .check-s:after{
+    left: 0.8rem;
+    top: 0.4rem;
+    width: 0.5rem;
+    height: 1rem;
+    border:solid black;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform:rotate(45deg)
+}
+
+/*Mobile adjustments*/
+@media(max-width:750px){
+    .input-check{
+        width: 50%;
+    }
+}

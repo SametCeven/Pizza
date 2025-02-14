@@ -2,13 +2,14 @@ import {useState,useEffect} from "react";
 import { useHistory,Link } from "react-router-dom";
 import axios from "axios";
 import "./OrderForm.css";
-import Header from "./Header.jsx"; 
-import Radio from "./Radio.jsx";
-import Dropdown from "./Dropdown.jsx";
-import Checkbox from "./Checkbox.jsx";
-import Name from "./Name.jsx";
-import OrderFooter from "./OrderFooter.jsx";
-import Footer from "./Footer.jsx";
+import Header from "../components/Header.jsx"; 
+import Radio from "../components/Radio.jsx";
+import Dropdown from "../components/Dropdown.jsx";
+import Checkbox from "../components/Checkbox.jsx";
+import Name from "../components/Name.jsx";
+import OrderFooter from "../components/OrderFooter.jsx";
+import Footer from "../components/Footer.jsx";
+import {toast} from "react-toastify";
 
 
 const initialFormData = {
@@ -47,6 +48,7 @@ export default function SiparisFormu(props){
     const [formData,setFormData] = useState(initialFormData);
     const [error,setError] = useState(initialError);
     const [isValid,setIsValid] = useState(false);
+    const [loading,setLoading] = useState(false);
     let history = useHistory();
 
     function handleClick(event){
@@ -95,18 +97,23 @@ export default function SiparisFormu(props){
     
     function handleSubmit(event){
         event.preventDefault();
+        setLoading(true);
         axios.post("https://reqres.in/api/pizza",formData)
         .then((response)=>{
             console.log(response.data);
             handleData(response.data);
+            toast.success("Order Received");
             history.push("/OrderConfirmation");
         })
         .catch((error)=>{
             console.log(error);
             handleError(error);
+            toast.error("Order Failed");
             history.push("/ErrorPage");
         })
-        
+        .finally(()=>{
+            setLoading(false);
+        })
     }
 
     useEffect(()=>{
@@ -117,25 +124,20 @@ export default function SiparisFormu(props){
     
     useEffect(()=>{
         setFormData({...formData,["toppingsCounter"]:formData.toppings.length});
+        
+        let tempToppingsAmountNum = Number(formData.toppingsCounter) * 5;
+        let tempToppingsAmount = (Math.round(tempToppingsAmountNum * 100) / 100).toFixed(2);
+        setFormData({...formData,["toppingsAmount"]:tempToppingsAmount});
+
+        let tempAmountNum = 85.5 + Number(formData.toppingsAmount);
+        let tempAmount = (Math.round(tempAmountNum * 100) / 100).toFixed(2);
+        setFormData({...formData,["amount"]:tempAmount});
+
+        let tempTotalAmountNum = Number(formData.amount) * Number(formData.pizzaCount);
+        let tempTotalAmount = (Math.round(tempTotalAmountNum * 100) / 100).toFixed(2);
+        setFormData({...formData,["totalAmount"]:tempTotalAmount});
+
     },[formData.toppings])
-
-    useEffect(()=>{
-        let tempNum = Number(formData.toppingsCounter) * 5
-        let temp = (Math.round(tempNum * 100) / 100).toFixed(2);
-        setFormData({...formData,["toppingsAmount"]:temp});
-    },[formData.toppingsCounter])
-
-    useEffect(()=>{
-        let tempNum = 85.5 + Number(formData.toppingsAmount)
-        let temp = (Math.round(tempNum * 100) / 100).toFixed(2)
-        setFormData({...formData,["amount"]:temp});
-    },[formData.toppingsAmount])
-
-    useEffect(()=>{
-        let tempNum = Number(formData.amount) * Number(formData.pizzaCount)
-        let temp = (Math.round(tempNum * 100) / 100).toFixed(2)
-        setFormData({...formData,["totalAmount"]:temp});
-    },[formData.amount,formData.pizzaCount])
 
 
     return (
@@ -206,6 +208,7 @@ export default function SiparisFormu(props){
                             toppingsAmount = {formData.toppingsAmount}
                             amount = {formData.amount}
                             totalAmount = {formData.totalAmount}
+                            loading = {loading}
                             ></OrderFooter>
                         </div>
                     </form>

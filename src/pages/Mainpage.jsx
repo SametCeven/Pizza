@@ -1,9 +1,9 @@
 import "./Mainpage.css";
 import {useHistory} from "react-router-dom";
 import {useState} from "react";
-import Footer from "./Footer.jsx";
-import MainpageNav from "./MainpageNav.jsx";
-import MainpageItem from "./MainpageItem.jsx";
+import Footer from "../components/Footer.jsx";
+import MainpageNav from "../components/MainpageNav.jsx";
+import MainpageItem from "../components/MainpageItem.jsx";
 
 const menuItemsInitial = [{
     img: "../images/iteration-2-images/pictures/food-1.png",

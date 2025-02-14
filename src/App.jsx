@@ -1,10 +1,11 @@
 import './App.css';
-import OrderForm from "./components/OrderForm.jsx";
-import Mainpage from './components/Mainpage.jsx';
-import OrderConfirmation from './components/OrderConfirmation.jsx';
-import ErrorPage from "./components/ErrorPage.jsx"
+import OrderForm from "./pages/OrderForm.jsx";
+import Mainpage from './pages/Mainpage.jsx';
+import OrderConfirmation from './pages/OrderConfirmation.jsx';
+import ErrorPage from "./pages/ErrorPage.jsx";
 import {Switch,Route} from "react-router-dom";
 import {useState} from "react";
+import {ToastContainer} from "react-toastify";
 
 export default function App() {
   const [data,setData] = useState({});
@@ -18,6 +19,9 @@ export default function App() {
 
   return (
     <>
+      <ToastContainer
+        position='bottom-right'
+      ></ToastContainer>
       <Switch>
         <Route path="/" exact>
           <Mainpage></Mainpage>
@@ -31,8 +35,6 @@ export default function App() {
         <Route path="/ErrorPage">
           <ErrorPage apiError={apiError}></ErrorPage>
         </Route>
-        
-        
       </Switch>
     </>
   )

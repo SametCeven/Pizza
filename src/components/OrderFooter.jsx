@@ -1,7 +1,8 @@
 import "./OrderFooter.css";
 
+
 export default function SiparisFooter(props){
-    const {handleClick,pizzaCount,handleChange,isValid,toppingsAmount,amount,totalAmount} = props;
+    const {handleClick,pizzaCount,handleChange,isValid,toppingsAmount,amount,totalAmount,loading} = props;
  
     return(
         <div className="order-footer">
@@ -35,6 +36,8 @@ export default function SiparisFooter(props){
                             </div>
                         </div>
                     {isValid?<button type="submit" disabled={!isValid}>ORDER</button>:""}
+                    {loading ? <p> Loading !</p> : ""}
+                    
                 </div>
             </div>
         </div>

@@ -22,15 +22,14 @@ export default function Checkbox(props){
                         <div className="input-check">
                             <label 
                                 className="check-l" 
-                                htmlFor={topping} 
-                                key={index}
+                                htmlFor={topping}
                                 >{topping}
                                 <input 
                                     className="check-i"
                                     type="checkbox" 
                                     name="toppings"
                                     id={topping}
-                                    key={index}
+                                    key={toppings}
                                     value={topping}
                                     onChange={handleChange}
                                 />

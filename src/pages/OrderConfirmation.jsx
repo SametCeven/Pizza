@@ -1,5 +1,5 @@
 import "./OrderConfirmation.css";
-import Footer from "./Footer.jsx"
+import Footer from "../components/Footer.jsx"
 export default function OrderConfirmation(props){
     const {data,apiError} = props;
     const {size,crust,toppings,toppingsAmount,totalAmount} = data;

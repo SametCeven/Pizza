@@ -1,6 +1,6 @@
-### Pizza Project
+# Pizza Project
 
-# Tech Stack:
+### Tech Stack:
 - React
 - Axios
 - Toastify

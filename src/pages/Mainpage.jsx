@@ -6,19 +6,19 @@ import MainpageNav from "../components/MainpageNav.jsx";
 import MainpageItem from "../components/MainpageItem.jsx";
 
 const menuItemsInitial = [{
-    img: "../public/images/iteration-2-images/pictures/food-1.png",
+    img: "../images/iteration-2-images/pictures/food-1.png",
     title: "Terminal Pizza",
     price: 85.50,
     rating: 4.9,
     comments: 200,
 },{
-    img: "../public/images/iteration-2-images/pictures/food-2.png",
+    img: "../images/iteration-2-images/pictures/food-2.png",
     title: "Position Absolute Acı Pizza",
     price: 85.50,
     rating: 4.9,
     comments: 200,
 },{
-    img: "../public/images/iteration-2-images/pictures/food-3.png",
+    img: "../images/iteration-2-images/pictures/food-3.png",
     title: "useEffect Tavuklu Burger",
     price: 85.50,
     rating: 4.9,

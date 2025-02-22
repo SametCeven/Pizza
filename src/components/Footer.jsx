@@ -2,7 +2,6 @@ import "./Footer.css"
 import {useState} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
-
 export default function Footer(){
     const menuItems = ["Terminal Pizza","5 Kişilik Hackathlon Pizza","useEffect Tavuklu Pizza","Beyaz Console Frosty","Testler Geçti Mutlu Burger","Position Absoulte Acı Burger"];
     const [menu,setMenu] = useState(menuItems);
@@ -13,17 +12,17 @@ export default function Footer(){
         <footer className="footer">
             <div className="footer-sub">
                 <div className="footer-info">
-                    <img id="footer-icon-logo" src="../images/iteration-2-images/footer/logo-footer.svg" alt="footer-logo" />
+                    <img id="footer-icon-logo" src="../public/images/iteration-2-images/footer/logo-footer.svg" alt="footer-logo" />
                     <div>
-                        <img src="../images/iteration-2-images/footer/icons/icon-1.png" alt="footer-icon-map" />
+                        <img src="../public/images/iteration-2-images/footer/icons/icon-1.png" alt="footer-icon-map" />
                         <p>341 Londonderry Road, Istanbul Turkey</p>
                     </div>
                     <div>
-                        <img src="../images/iteration-2-images/footer/icons/icon-2.png" alt="footer-icon-email" />
+                        <img src="../public/images/iteration-2-images/footer/icons/icon-2.png" alt="footer-icon-email" />
                         <span>aciktim@teknolojikyemekler.com</span>
                     </div>
                     <div>
-                        <img src="../images/iteration-2-images/footer/icons/icon-3.png" alt="footer-icon-phone" />
+                        <img src="../public/images/iteration-2-images/footer/icons/icon-3.png" alt="footer-icon-phone" />
                         <span>+90 216 123 45 67</span>
                     </div>
                 </div>
@@ -40,7 +39,7 @@ export default function Footer(){
                 <div className="footer-insta">
                     <h1>Instagram</h1>
                     {imgs.map((img,index)=>{
-                        let tempSrc = `../images/iteration-2-images/footer/insta/${img}`;
+                        let tempSrc = `../public/images/iteration-2-images/footer/insta/${img}`;
                         return( 
                             <img key={index} src={tempSrc}/>
                         )

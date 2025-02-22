@@ -35,7 +35,7 @@ export default function Mainpage(){
         <div className="mainpage-wrapper">
             <div className="mainpage-container">
                 <header>
-                    <img src="../../public/images/iteration-1-images/home-banner.PNG" alt="banner-mainpage" className="mainpage-bgimg"/>
+                    <img src="../../public/images/iteration-1-images/home-banner.png" alt="banner-mainpage" className="mainpage-bgimg"/>
                     <div>
                         <img src="../../public/images/iteration-1-images/logo.svg" alt="logo-mainpage" className="mainpage-logo"/>
                         <h2>don't miss offers </h2>

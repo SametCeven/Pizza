@@ -19,9 +19,10 @@ export default function Checkbox(props){
             <div>
                 {toppings.map((topping,index)=>{
                     return(
-                        <div className="input-check">
+                        <div className="input-check" key={index}>
                             <label 
                                 className="check-l" 
+                                key={index}
                                 htmlFor={topping}
                                 >{topping}
                                 <input 

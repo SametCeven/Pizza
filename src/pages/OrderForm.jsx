@@ -123,22 +123,23 @@ export default function SiparisFormu(props){
     },[error])
     
     useEffect(()=>{
-        setFormData({...formData,["toppingsCounter"]:formData.toppings.length});
+        let toppingsCounter = formData.toppings.length; 
         
-        let tempToppingsAmountNum = Number(formData.toppingsCounter) * 5;
+        let tempToppingsAmountNum = Number(toppingsCounter) * 5;
         let tempToppingsAmount = (Math.round(tempToppingsAmountNum * 100) / 100).toFixed(2);
-        setFormData({...formData,["toppingsAmount"]:tempToppingsAmount});
 
-        let tempAmountNum = 85.5 + Number(formData.toppingsAmount);
+        let tempAmountNum = 85.5 + Number(tempToppingsAmount);
         let tempAmount = (Math.round(tempAmountNum * 100) / 100).toFixed(2);
-        setFormData({...formData,["amount"]:tempAmount});
 
-        let tempTotalAmountNum = Number(formData.amount) * Number(formData.pizzaCount);
+        let tempTotalAmountNum = Number(tempAmount) * Number(formData.pizzaCount);
         let tempTotalAmount = (Math.round(tempTotalAmountNum * 100) / 100).toFixed(2);
-        setFormData({...formData,["totalAmount"]:tempTotalAmount});
+        //{...formData,["totalAmount"]:tempTotalAmount,["amount"]:tempAmount,["toppingsAmount"]:tempToppingsAmount,["toppingsCounter"]:toppingsCounter}
+        
+        setFormData(
+            {...formData,["totalAmount"]:tempTotalAmount,["amount"]:tempAmount,["toppingsAmount"]:tempToppingsAmount,["toppingsCounter"]:toppingsCounter}
+        )
 
-    },[formData.toppings])
-
+    },[formData.toppings,formData.pizzaCount])
 
     return (
         <>
